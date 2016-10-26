@@ -1,0 +1,24 @@
+{
+  "name": "json-schema-faker-cli",
+  "version": "1.0.0",
+  "description": "cli for json-schema-faker",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oprogramador/json-schema-faker-cli.git"
+  },
+  "keywords": [
+    "json",
+    "schema",
+    "fake",
+    "faker",
+    "cli",
+    "mock"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "json-schema-faker": "^0.3.6"
+  }
+}
