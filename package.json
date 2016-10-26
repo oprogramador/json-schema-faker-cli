@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "cli for json-schema-faker",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint app index.js",
+    "test": "mocha --recursive app/tests"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,16 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "json-schema-faker": "^0.3.6"
+    "json-schema-faker": "^0.3.6",
+    "jsonfile": "^2.4.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "mocha": "^3.1.2"
   }
 }
