@@ -1,0 +1,17 @@
+{
+  "title": "foo",
+  "type": "object",
+  "properties": {
+    "key1": {
+      "type": "string"
+    },
+    "key2": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "key1",
+    "key2"
+  ]
+}
+
