@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "cli for json-schema-faker",
   "scripts": {
-    "lint": "eslint app index.js",
+    "lint": "eslint app *.js",
     "test": "mocha --recursive app/tests"
   },
   "repository": {
