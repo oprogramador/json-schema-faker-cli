@@ -17,4 +17,4 @@ It is a CLI for [json-schema-faker](https://www.npmjs.com/package/json-schema-fa
 ### generating array of multiple objects
 `generate-json schema.json output.json $ITEMS_LENGTH`
 
-- `ITEMS_LENGTH` - number of object in the array
+- `ITEMS_LENGTH` - number of objects in the array
