@@ -30,4 +30,14 @@ describe('cmd', () => {
 
     expect(outputObject).to.have.all.keys('key1', 'key2');
   });
+
+  it('generates multiple rows when itemsLength is specified', () => {
+    const itemsLength = 30;
+    execSync(`${path.resolve(__dirname, '../../../cmd.js')} ${path.resolve(__dirname, '../data/schema.json')} ${outputPath} ${itemsLength}`);
+    const outputArray = jsonfile.readFileSync(outputPath);
+
+    expect(outputArray).to.be.an('array');
+    expect(outputArray).to.have.length(itemsLength);
+    outputArray.map(object => expect(object).to.have.all.keys('key1', 'key2'));
+  });
 });

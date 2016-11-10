@@ -1,6 +1,6 @@
 {
   "name": "json-schema-faker-cli",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "cli for json-schema-faker",
   "scripts": {
     "lint": "eslint app *.js",
@@ -24,7 +24,8 @@
   "license": "MIT",
   "dependencies": {
     "json-schema-faker": "^0.3.6",
-    "jsonfile": "^2.4.0"
+    "jsonfile": "^2.4.0",
+    "lodash": "^4.16.6"
   },
   "devDependencies": {
     "chai": "^3.5.0",
