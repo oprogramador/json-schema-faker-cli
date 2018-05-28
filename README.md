@@ -4,7 +4,7 @@ It is a CLI for [json-schema-faker](https://www.npmjs.com/package/json-schema-fa
 
 ## install
 
-`sudo npm install -g json-schema-faker-cli`
+`npm install -g json-schema-faker-cli`
 
 ## usage
 
