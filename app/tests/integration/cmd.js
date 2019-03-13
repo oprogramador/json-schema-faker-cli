@@ -9,7 +9,7 @@ const outputPath = path.resolve(__dirname, '../data/example.json');
 describe('cmd', () => {
   beforeEach('remove output file', () => {
     try {
-      fs.unlink(outputPath);
+      fs.unlink(outputPath, () => {});
     } catch (error) {
       if (!/no such file or directory/.test(error.message)) {
         throw error;
