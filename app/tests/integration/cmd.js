@@ -18,6 +18,7 @@ describe('cmd', () => {
   });
 
   it('generates JSON', () => {
+    // eslint-disable-next-line max-len
     execSync(`${path.resolve(__dirname, '../../../cmd.js')} ${path.resolve(__dirname, '../data/schema.json')} ${outputPath}`);
     const outputObject = jsonfile.readFileSync(outputPath);
 
@@ -25,6 +26,7 @@ describe('cmd', () => {
   });
 
   it('generates all required fields', () => {
+    // eslint-disable-next-line max-len
     execSync(`${path.resolve(__dirname, '../../../cmd.js')} ${path.resolve(__dirname, '../data/schema.json')} ${outputPath}`);
     const outputObject = jsonfile.readFileSync(outputPath);
 
@@ -33,6 +35,7 @@ describe('cmd', () => {
 
   it('generates multiple rows when itemsLength is specified', () => {
     const itemsLength = 30;
+    // eslint-disable-next-line max-len
     execSync(`${path.resolve(__dirname, '../../../cmd.js')} ${path.resolve(__dirname, '../data/schema.json')} ${outputPath} ${itemsLength}`);
     const outputArray = jsonfile.readFileSync(outputPath);
 

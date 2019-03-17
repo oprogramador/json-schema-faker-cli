@@ -1,15 +1,3 @@
 {
-  "env": {
-    "node": true,
-    "mocha": true
-  },
-  "extends": "airbnb",
-  "rules": {
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": true
-      }
-    ]
-  }
+  "extends": "eslint-config-airbnb-improved"
 }
