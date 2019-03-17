@@ -2,7 +2,7 @@ const generate = require('../../generate');
 const fs = require('fs');
 const path = require('path');
 const jsonfile = require('jsonfile');
-const expect = require('chai').expect;
+const { expect } = require('chai');
 
 const outputPath = path.resolve(__dirname, '../data/example.json');
 
