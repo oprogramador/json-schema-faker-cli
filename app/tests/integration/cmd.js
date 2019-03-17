@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const jsonfile = require('jsonfile');
-const expect = require('chai').expect;
-const execSync = require('child_process').execSync;
+const { expect } = require('chai');
+const { execSync } = require('child_process');
 
 const outputPath = path.resolve(__dirname, '../data/example.json');
 
