@@ -525,12 +525,12 @@ eslint-config-airbnb-base@^13.1.0:
     object.assign "^4.1.0"
     object.entries "^1.0.4"
 
-eslint-config-airbnb-improved@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.npmjs.org/eslint-config-airbnb-improved/-/eslint-config-airbnb-improved-4.0.4.tgz#2db05e8d9bdf77d88f24828207c0aae8245b4514"
-  integrity sha512-EWsEAX+/QxkXKx7zNBAJMfzuegHb6zAN4UL36WVR9jH47i1KKbAfm0AGbigLRPnh/ciDfGCc6NPfDjcTbXQNBg==
+eslint-config-airbnb-improved@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-improved/-/eslint-config-airbnb-improved-4.0.5.tgz#383a78b8817cc3d1cea7d67aee00b9f69e36ac7f"
+  integrity sha512-9WgurpPYXAM4LNkYXWPFWzMFGTG+GU76tBAZeKRVb38l4LiZooJVNd8uQoCo98NnD8F3cgVtJEx7orkxqK1pKg==
   dependencies:
-    eslint "^5.15.2"
+    eslint "^5.15.3"
     eslint-config-airbnb "^17.1.0"
     eslint-plugin-import "^2.16.0"
     eslint-plugin-jsx-a11y "^6.2.1"
@@ -641,10 +641,10 @@ eslint-visitor-keys@^1.0.0:
   resolved "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
   integrity sha512-qzm/XxIbxm/FHyH341ZrbnMUpe+5Bocte9xkmFMzPMjRaZMcXww+MpBptFvtU+79L362nqiLhekCxCxDPaUMBQ==
 
-eslint@^5.15.2:
-  version "5.15.2"
-  resolved "https://registry.npmjs.org/eslint/-/eslint-5.15.2.tgz#0237bbb2362f89f4effef2f191eb0fea5279c0a5"
-  integrity sha512-I8VM4SILpMwUvsRt83bQVwIRQAJ2iPMXun1FVZ/lV1OHklH2tJaXqoDnNzdiFc6bnCtGKXvQIQNP3kj1eMskSw==
+eslint@^5.15.3:
+  version "5.15.3"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.15.3.tgz#c79c3909dc8a7fa3714fb340c11e30fd2526b8b5"
+  integrity sha512-vMGi0PjCHSokZxE0NLp2VneGw5sio7SSiDNgIUn2tC0XkWJRNOIoHIg3CliLVfXnJsiHxGAYrkw0PieAu8+KYQ==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.9.1"
