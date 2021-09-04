@@ -1,6 +1,6 @@
 {
   "name": "json-schema-faker-cli",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "cli for json-schema-faker",
   "scripts": {
     "lint": "eslint app *.js",
