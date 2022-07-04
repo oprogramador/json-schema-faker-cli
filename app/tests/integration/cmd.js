@@ -43,4 +43,15 @@ describe('cmd', () => {
     expect(outputArray).to.have.length(itemsLength);
     outputArray.map(object => expect(object).to.have.all.keys('key1', 'key2'));
   });
+
+  it('works with options', () => {
+    // eslint-disable-next-line max-len
+    execSync(`${path.resolve(__dirname, '../../../cmd.js')} ${path.resolve(__dirname, '../data/schema.json')} ${outputPath} none ./tests/data/options`);
+    const outputObject = jsonfile.readFileSync(outputPath);
+
+    expect(outputObject).to.deep.equal({
+      key1: 'Ut velitUt velitUt velit',
+      key2: 'Ut velitUt velitUt velit',
+    });
+  });
 });

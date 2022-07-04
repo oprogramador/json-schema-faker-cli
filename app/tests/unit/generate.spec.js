@@ -1,3 +1,4 @@
+const faker = require('json-schema-faker');
 const generate = require('../../generate');
 const fs = require('fs');
 const path = require('path');
@@ -7,6 +8,10 @@ const { expect } = require('chai');
 const outputPath = path.resolve(__dirname, '../data/example.json');
 
 describe('generate', () => {
+  beforeEach('reset faker options', () => {
+    faker.reset();
+  });
+
   beforeEach('remove output file', () => {
     try {
       fs.unlink(outputPath, () => {});
@@ -39,5 +44,15 @@ describe('generate', () => {
     expect(outputArray).to.be.an('array');
     expect(outputArray).to.have.length(itemsLength);
     outputArray.map(object => expect(object).to.have.all.keys('key1', 'key2'));
+  });
+
+  it('works with options', () => {
+    generate(path.resolve(__dirname, '../data/schema.json'), outputPath, undefined, './tests/data/options');
+    const outputObject = jsonfile.readFileSync(outputPath);
+
+    expect(outputObject).to.deep.equal({
+      key1: 'Ut velitUt velitUt velit',
+      key2: 'Ut velitUt velitUt velit',
+    });
   });
 });
