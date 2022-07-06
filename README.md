@@ -13,13 +13,33 @@ It is a CLI for [json-schema-faker](https://www.npmjs.com/package/json-schema-fa
 
 ## usage
 
+### params
+- file (path) containing JSON schema
+- generated file (path) according to the provided schema
+- number of objects in the array
+- file (path) containing options (in JS or JSON format)
+
 ### generating single object from the schema
 `generate-json schema.json output.json`
-
-- `schema.json` - file containing JSON schema
-- `output.json` - generated file according to the provided schema
 
 ### generating array of multiple objects
 `generate-json schema.json output.json $ITEMS_LENGTH`
 
-- `ITEMS_LENGTH` - number of objects in the array
+### generating with options set
+`generate-json schema.json output.json none options.js`
+
+You can use any of the [json-schema-faker available options](https://github.com/json-schema-faker/json-schema-faker/tree/master/docs#available-options).
+
+an example `options.js`:
+```js
+module.exports = {
+  minLength: 20,
+  random: () => 0.2,
+};
+```
+
+### generating to stdout
+`generate-json schema.json`
+
+### skipping a param
+You can pass `none` to skip any of the optional params.
