@@ -54,4 +54,11 @@ describe('cmd', () => {
       key2: 'Ut velitUt velitUt velit',
     });
   });
+
+  it('works with stdout instead of writing to file', () => {
+    // eslint-disable-next-line max-len
+    const res = execSync(`${path.resolve(__dirname, '../../../cmd.js')} ${path.resolve(__dirname, '../data/schema.json')} none none ./tests/data/options`);
+
+    expect(res.toString()).to.deep.equal('{"key1":"Ut velitUt velitUt velit","key2":"Ut velitUt velitUt velit"}\n');
+  });
 });

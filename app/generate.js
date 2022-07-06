@@ -15,7 +15,11 @@ function generate(inputPath, outputPath = 'none', itemsLength = 'none', optionsP
   const output = itemsLength === 'none'
     ? faker.generate(inputObject)
     : _.times(itemsLength, () => faker.generate(inputObject));
-  jsonfile.writeFileSync(outputPath, output);
+  if (outputPath !== 'none') {
+    jsonfile.writeFileSync(outputPath, output);
+  } else {
+    console.log(JSON.stringify(output));
+  }
 }
 
 module.exports = generate;

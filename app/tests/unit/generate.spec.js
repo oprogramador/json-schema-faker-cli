@@ -1,3 +1,4 @@
+const sinon = require('sinon');
 const faker = require('json-schema-faker');
 const generate = require('../../generate');
 const fs = require('fs');
@@ -5,9 +6,14 @@ const path = require('path');
 const jsonfile = require('jsonfile');
 const { expect } = require('chai');
 
+const sandbox = sinon.createSandbox();
 const outputPath = path.resolve(__dirname, '../data/example.json');
 
 describe('generate', () => {
+  beforeEach('reset faker options', () => {
+    sandbox.stub(console, 'log');
+  });
+
   beforeEach('reset faker options', () => {
     faker.reset();
   });
@@ -20,6 +26,10 @@ describe('generate', () => {
         throw error;
       }
     }
+  });
+
+  afterEach(() => {
+    sandbox.restore();
   });
 
   it('generates JSON', () => {
@@ -54,5 +64,13 @@ describe('generate', () => {
       key1: 'Ut velitUt velitUt velit',
       key2: 'Ut velitUt velitUt velit',
     });
+  });
+
+  it('works with stdout instead of writing to file', () => {
+    generate(path.resolve(__dirname, '../data/schema.json'), undefined, undefined, './tests/data/options');
+
+    expect(console.log.getCalls().map(c => c.args)).to.deep.equal([[
+      '{"key1":"Ut velitUt velitUt velit","key2":"Ut velitUt velitUt velit"}',
+    ]]);
   });
 });
