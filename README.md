@@ -42,4 +42,4 @@ module.exports = {
 `generate-json schema.json`
 
 ### skipping a param
-You can pass `none` to skip any of the optional params. It's useful when you need to pass a following param when skipping some of previous params at the same time.
+You can pass `none` to skip any of the optional params. It's useful when you need to pass a following param when skipping some of the previous params at the same time.
