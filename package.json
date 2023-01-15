@@ -25,7 +25,8 @@
   "dependencies": {
     "json-schema-faker": "^0.5.0-rcv.44",
     "jsonfile": "^6.1.0",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "semantic-release": "19"
   },
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^8.0.1",
